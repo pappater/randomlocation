@@ -4,8 +4,8 @@
 
 The Random Location application displays a random location on a map within a specified radius from the user's current location or a manually entered location. This tool provides an interactive way to visualize different geographical areas.
 
-![Random Location App in light mode](./light.png)
-![Random Location App in dark mode](./dark.png)
+![Random Location App in light mode](./public/light.png)
+![Random Location App in dark mode](./public/dark.png)
 
 ## Tech Stack Used
 
