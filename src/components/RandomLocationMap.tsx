@@ -58,7 +58,8 @@ const RandomLocationMap = () => {
           isDarkMode ? "border-neutral-700" : "border-neutral-200"
         }`}
       >
-        <h1 className="text-2xl font-bold">Random Location</h1>
+        <h1 className="text-xl md:text-2xl font-bold">Random Location</h1>
+
         <div className="hidden md:flex items-center space-x-4">
           <div className="relative">
             <select
@@ -240,7 +241,7 @@ const RandomLocationMap = () => {
 
       <main className="p-4">
         <p
-          className={`mb-4 text-sm ${
+          className={`mb-4 text-sm text-left md:text-center lg:text-center ${
             isDarkMode ? "text-neutral-400" : "text-neutral-600"
           }`}
         >
