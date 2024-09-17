@@ -1,46 +1,123 @@
-# Getting Started with Create React App
+# Random Location Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+The Random Location application displays a random location on a map within a specified radius from the user's current location or a manually entered location. This tool provides an interactive way to visualize different geographical areas.
 
-In the project directory, you can run:
+![Random Location App in light mode](./light.png)
+![Random Location App in dark mode](./dark.png)
 
-### `npm start`
+## Tech Stack Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React:** For building the user interface.
+- **TypeScript:** For type safety and better development experience.
+- **Tailwind CSS:** For styling and responsive design.
+- **Leaflet:** For rendering the interactive map.
+- **Lucide React:** For integrating various icons.
+- **gh-pages:** For deploying the application to GitHub Pages.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Functionality and Usage
 
-### `npm test`
+- **Radius Selection:** Choose a radius from a dropdown list or enter a custom radius.
+- **Location Entry:** Manually enter a location or use the browser’s geolocation.
+- **Random Location:** Display a random location within the specified radius on the map.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Visit the application at [https://pappater.github.io/randomlocation/](https://pappater.github.io/randomlocation/) to see it in action.
 
-### `npm run build`
+## Responsiveness
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application is designed to be fully responsive, adjusting to various screen sizes and orientations to ensure a seamless experience across different devices.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Building the App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Key Packages
 
-### `npm run eject`
+- **`gh-pages` (v6.1.1):** Used for deploying the application to GitHub Pages. This package helps publish your project directly from the `gh-pages` branch.
+- **`leaflet` (v1.9.4):** A leading open-source JavaScript library for interactive maps. It provides an easy-to-use API to create and manage maps.
+- **`lucide-react` (v0.441.0):** Provides a collection of icons for React, allowing easy integration of various icons in the application’s UI.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Deployment with `gh-pages`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Install `gh-pages`:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   npm install gh-pages --save-dev
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **Add deployment scripts to `package.json`:**
 
-## Learn More
+   ```json
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build"
+   }
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Deploy the application:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm run deploy
+   ```
+
+4. **Verify the deployment** by visiting the provided GitHub Pages URL.
+
+## Installation Instructions
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/pappater/randomlocation.git
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd randomlocation
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Run the application locally:**
+   ```bash
+   npm start
+   ```
+
+## Usage Instructions
+
+- Open the application in your browser.
+- Select or enter a radius.
+- Choose a location option (manual or geolocation).
+- View the random location on the map.
+
+## Configuration
+
+- **Environment Variables:** If applicable, document any required environment variables or configuration files.
+
+## Troubleshooting
+
+- **Common Issues:**
+
+  - **Issue:** Application does not load.
+
+    - **Solution:** Ensure all dependencies are installed and the `npm start` command is executed in the project directory.
+
+  - **Issue:** Map does not display.
+    - **Solution:** Check the Leaflet integration and ensure API keys or tokens are correctly configured.
+
+## Contribution Guidelines
+
+- **Code Style:** Follow the project’s coding standards and use ESLint for linting.
+- **Submitting Changes:** Use pull requests to submit changes. Ensure to provide a description of the changes and any related issues.
+
+## Changelog
+
+- **[Version 1.0.0]** Initial release with basic features.
+- **[Version 1.1.0]** Added custom radius input and improved map responsiveness.
+
+## Node Version
+
+The application is developed using Node.js version v20.15.0.
